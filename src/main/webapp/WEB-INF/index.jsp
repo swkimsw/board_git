@@ -15,7 +15,7 @@
 		</tr>
 
 		<tr>
-			<td ><a href="inputFrom.jsp">입력</a></td>
+			<td ><a href="inputForm.jsp">입력</a></td>
 			<td><a href="/select.message">출력</a></td>
 		</tr>
 	</table>
