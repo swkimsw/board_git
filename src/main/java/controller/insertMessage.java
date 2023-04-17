@@ -1,11 +1,15 @@
 package controller;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import dao.MessageDAO;
+import dto.MessageDTO;
 
 @WebServlet("/insertMessage")
 public class insertMessage extends HttpServlet {
@@ -17,8 +21,11 @@ public class insertMessage extends HttpServlet {
 			String writer = request.getParameter("writer");
 			String message = request.getParameter("message");
 			
-			MemssageDAO dao = MessageDAO.getInstance();
+			MessageDAO dao = MessageDAO.getInstacne();
+			MessageDTO dto = new MessageDTO(0, writer,message);
+			dao.insert(dto);
 			
+			request.getRequestDispatcher("/index.jsp").forward(request, response);
 		}
 	}
 
