@@ -24,9 +24,9 @@
 		<c:forEach var="i" items="${list}">
 
 			<tr>
-				<td>${list.id}</td>
-				<td>${list.writer}</td>
-				<td>${list.messages}</td>
+				<td>${i.id}</td>
+				<td>${i.writer}</td>
+				<td>${i.message}</td>
 			</tr>
 
 		</c:forEach>
