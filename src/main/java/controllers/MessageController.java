@@ -9,6 +9,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import dao.MessageDAO;
+import dto.MessageDTO;
+
 @WebServlet("*.message")
 public class MessageController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -33,16 +36,16 @@ public class MessageController extends HttpServlet {
 			}
 			else if(cmd.equals("/update.message")) {
 				MessageDAO dao = MessageDAO.getInstance();
-				int id = Integer.parseInt(request.getParameter("id"));
-				String writer = request.getParameter("writer");
-				String message = request.getParameter("message");
+				int id = Integer.parseInt(request.getParameter("modId"));
+				String writer = request.getParameter("modWriter");
+				String message = request.getParameter("modMessages");
 				MessageDTO dto = new MessageDTO(id,writer,message);
 				int result = dao.update(dto);
 				response.sendRedirect("/select.message");
 			}
 			else if(cmd.equals("/delete.message")) {
 				MessageDAO dao = MessageDAO.getInstance();
-				int id = Integer.parseInt(request.getParameter("id"));
+				int id = Integer.parseInt(request.getParameter("delId"));
 				MessageDTO dto = new MessageDTO(id,null,null);
 				int result = dao.delete(dto);
 				response.sendRedirect("/select.message");

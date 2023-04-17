@@ -20,7 +20,7 @@ public class MessageDAO {
 
 	}
 
-	public synchronized static MessageDAO getInstacne() {
+	public synchronized static MessageDAO getInstance() {
 		if (instance == null) {
 			instance = new MessageDAO();
 		}
