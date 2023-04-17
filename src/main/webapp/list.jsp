@@ -30,12 +30,40 @@
 			</tr>
 
 		</c:forEach>
-		
+
+		<form action="/update.message">
+			<tr align="center">
+				<td colspan=3>
+					<input type="text" placeholder="수정할 대상 ID"name="modID"><br> 
+					<input type="text" placeholder="이름..." name="modWriter"><br> 
+					<input type="text" placeholder="메세지..." name="modMessages"><br>
+					<button>수정</button>
+				</td>
+			</tr>
+		</form>
+
+		<tr>
+			<td colspan=3 align="center">
+				<input type="text" placeholder="삭제할 아이디..." name="delID" id="delID">
+				<button id="delete">삭제</button>
+			</td>
+		</tr>
+
+
+
 		<tr>
 			<td colspan=3 align=center><a href="/index.jsp"><button>Back</button></a></td>
 		</tr>
 
 	</table>
+
+	<script>
+		$("#delete").on("click", function() {
+			let delID = $("#delID").val();
+			location.href = "/delete.message?delID=" + delID;
+		});
+	</script>
+
 
 
 
