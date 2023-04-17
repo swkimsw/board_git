@@ -74,7 +74,7 @@ public class MessageDAO {
 
 		return result;
 	}
-	
+
 	public int update(MessageDTO dto) throws Exception {
 		int result = 0;
 
@@ -92,7 +92,7 @@ public class MessageDAO {
 
 		return result;
 	}
-	
+
 	public int delete(MessageDTO dto) throws Exception {
 		int result = 0;
 
