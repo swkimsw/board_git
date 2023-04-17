@@ -8,8 +8,7 @@ import java.util.List;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
-
-import org.apache.tomcat.jdbc.pool.DataSource;
+import javax.sql.DataSource;
 
 import dto.MessageDTO;
 
