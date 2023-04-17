@@ -32,11 +32,8 @@
 		</c:forEach>
 		
 		<tr>
-			<td colspan=3 align=center><a href="index.html">Back</a></td>
+			<td colspan=3 align=center><a href="/index.jsp"><button>Back</button></a></td>
 		</tr>
-
-
-
 
 	</table>
 
