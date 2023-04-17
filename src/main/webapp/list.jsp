@@ -34,7 +34,7 @@
 		<form action="/update.message">
 			<tr align="center">
 				<td colspan=3>
-					<input type="text" placeholder="수정할 대상 ID"name="modID"><br> 
+					<input type="text" placeholder="수정할 대상 ID"name="modId"><br> 
 					<input type="text" placeholder="이름..." name="modWriter"><br> 
 					<input type="text" placeholder="메세지..." name="modMessages"><br>
 					<button>수정</button>
@@ -44,7 +44,7 @@
 
 		<tr>
 			<td colspan=3 align="center">
-				<input type="text" placeholder="삭제할 아이디..." name="delID" id="delID">
+				<input type="text" placeholder="삭제할 아이디..." name="delId" id="delId">
 				<button id="delete">삭제</button>
 			</td>
 		</tr>
@@ -59,8 +59,8 @@
 
 	<script>
 		$("#delete").on("click", function() {
-			let delID = $("#delID").val();
-			location.href = "/delete.message?delID=" + delID;
+			let delId = $("#delId").val();
+			location.href = "/delete.message?delId=" + delId;
 		});
 	</script>
 
