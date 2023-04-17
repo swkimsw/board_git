@@ -26,13 +26,13 @@ public class MessageController extends HttpServlet {
 				String message = request.getParameter("message");
 				MessageDTO dto = new MessageDTO(0, writer, message);
 				int result = dao.insert(dto);
-				response.sendRedirect("index.jsp");
+				response.sendRedirect("/index.jsp");
 			}
 			else if(cmd.equals("/select.message")) {
 				MessageDAO dao = MessageDAO.getInstance();
 				List<MessageDTO> result = dao.selectAll();
 				request.setAttribute("list", result);
-				request.getRequestDispatcher("list.jsp").forward(request, response);
+				request.getRequestDispatcher("/list.jsp").forward(request, response);
 			}
 			else if(cmd.equals("/update.message")) {
 				MessageDAO dao = MessageDAO.getInstance();
@@ -52,7 +52,7 @@ public class MessageController extends HttpServlet {
 			}
 		}catch(Exception e) {
 			e.printStackTrace();
-			response.sendRedirect("error.jsp");
+			response.sendRedirect("/error.jsp");
 		}
 	}
 
