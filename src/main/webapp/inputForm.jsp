@@ -11,7 +11,7 @@
 <body>
 	<form action="insert.message" method="get">
 		<input type="text" name="writer" placeholder="작성자를 입력하세요"><br>
-		<input type="text" name="msg" placeholder="전달할 내용을 입력하세요">
+		<input type="text" name="message" placeholder="전달할 내용을 입력하세요">
 		<button>전송</button>
 	</form>
 </body>
